@@ -1,0 +1,71 @@
+.FooterPages {
+  margin: auto;
+  margin-top: 70px;
+  background-color: hsla(0, 6%, 10%, 0.822);
+  color: #ccccccf1;
+  padding: 40px 100px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.Footer {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+}
+
+.Tomato-icon {
+  margin: 20px 0px;
+  display: flex;
+  gap: 20px;
+}
+.tomatoFootersLeft p {
+  margin: 20px 0px;
+  width: 80%;
+}
+.tomatoFootersRight li {
+  list-style: none;
+  margin: 13px 0px;
+}
+.tomatoFootersRight h2 {
+  font-size: 30px;
+  font-weight: 700px;
+}
+.tomatoFootersMiddle p {
+  margin: 13px 0px;
+}
+.tomatoFootersMiddle h2 {
+  font-size: 30px;
+  font-weight: 700px;
+}
+.H-r {
+  width: 100%;
+  margin: 20px 0px;
+}
+.footerEnd {
+  color: white;
+}
+.topUp {
+  width: 40px;
+  height: 40px;
+  position: fixed;
+  z-index: 5;
+  top: 0;
+  right: 0;
+}
+/****** media query responsive *****/
+@media (max-width: 740px) {
+  .Footer {
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+  }
+
+  .tomatoFootersLeft p {
+    width: 100%;
+  }
+  .footerEnd {
+    text-align: center;
+    font-size: 13px;
+  }
+}

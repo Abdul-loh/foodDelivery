@@ -1,0 +1,117 @@
+.foodNav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 0;
+}
+
+.navHome ul {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  color: #49557e;
+  font-size: 18px;
+  cursor: pointer;
+}
+.navHome li {
+  list-style: none;
+}
+.navIcon {
+  display: flex;
+  gap: 40px;
+  align-items: center;
+}
+.navBasket {
+  position: relative;
+}
+.dot {
+  min-width: 10px;
+  min-height: 10px;
+  background-color: tomato;
+  position: absolute;
+  top: -8px;
+  border-radius: 5px;
+  right: -8px;
+}
+.homeBtn {
+  padding: 10px 30px;
+  border: 1px solid tomato;
+  outline: none;
+  border-radius: 50px;
+  background-color: transparent;
+  font-size: 16px;
+  color: #49557e;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.homeBtn:hover {
+  background-color: #fff4f2;
+}
+.navHome .activate {
+  padding-bottom: 2px;
+  border-bottom: 3px solid tomato;
+}
+/********** responsive navBar *********/
+@media (max-width: 740px) {
+  .homeBtn {
+    padding: 10px 15px;
+  }
+  .navIcon {
+    gap: 20px;
+  }
+  .navHome ul {
+    display: none;
+  }
+}
+/********** iphone responsive navBar *********/
+@media (max-width: 480px) {
+  .homeBtn {
+    padding: 7px 8px;
+  }
+  .navIcon {
+    gap: 20px;
+  }
+
+  .navHomelogo {
+    width: 130px;
+  }
+  .navHome ul {
+    display: none;
+  }
+}
+/********** Android responsive navBar *********/
+@media (max-width: 400px) {
+  .homeBtn {
+    padding: 7px 8px;
+  }
+  .navIcon {
+    gap: 20px;
+  }
+
+  .navHomelogo {
+    width: 100px;
+  }
+  .navHome ul {
+    display: none;
+  }
+}
+/********** ipad responsive navBar *********/
+@media (max-width: 900px) {
+  .foodNav {
+    margin-top: 20px;
+  }
+
+  .homeBtn {
+    padding: 7px 8px;
+  }
+  .navIcon {
+    gap: 20px;
+  }
+
+  .navHomelogo {
+    width: 120px;
+  }
+  .navHome ul {
+    font-size: 16px;
+  }
+}

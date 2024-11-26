@@ -1,0 +1,59 @@
+.ChildrenMenuFood {
+  width: 100%;
+  box-shadow: 0px 0px 10px #00000015;
+  transition: 0.35s;
+  animation: fadeIn 1s;
+}
+.Dishes_images {
+  width: 100%;
+  border-radius: 15px 15px 0px 0px;
+  cursor: pointer;
+  position: relative;
+}
+.Dishes {
+  position: relative;
+}
+.About_dishes {
+  padding: 10px 13px;
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+}
+
+.Rating {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.Rating h2 {
+  font-size: 17px;
+  font-weight: 700px;
+}
+.Desription {
+  color: #cccccc;
+  font-size: 15px;
+}
+.pricing {
+  font-size: 30px;
+  font-weight: 500;
+  color: tomato;
+}
+.plus-img {
+  position: absolute;
+  bottom: 15px;
+  right: 15px;
+  width: 35px;
+}
+.add_Sub {
+  position: absolute;
+  bottom: 15px;
+  right: 15px;
+  width: 35px;
+  border-radius: 30px;
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 5px 60px;
+  gap: 15px;
+}

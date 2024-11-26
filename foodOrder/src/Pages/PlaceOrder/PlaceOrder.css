@@ -1,0 +1,79 @@
+.deliveryInfo {
+  margin-top: 100px;
+}
+
+.delivery_Information {
+  display: flex;
+  justify-content: space-between;
+}
+
+.deliveryLeft {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.deliveryLeft input {
+  width: 100%;
+  padding: 10px 5px;
+  border: 1px solid #ccc;
+  outline: none;
+  font-size: 16px;
+}
+.infoMultiple {
+  display: flex;
+  gap: 10px;
+}
+.deliveryInfo h3 {
+  font-size: 25px;
+
+  margin-bottom: 10px;
+  text-transform: capitalize;
+}
+
+/* .rightDeliv_info {
+  width: 100%;
+} */
+.cartsTotal {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 70px;
+}
+
+.left-cartTotal h3 {
+  font-size: 25px;
+}
+.cartsHr {
+  margin-top: 5px;
+  background-color: #ccc;
+  height: 2px;
+  border: none;
+}
+.Total {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  margin-bottom: 10px;
+  margin-top: 15px;
+}
+
+.CartsTotal_Btn {
+  border: 1px solid tomato;
+  outline: none;
+  background-color: tomato;
+  color: white;
+  text-transform: uppercase;
+  border-radius: 4px;
+  padding: 9px 50px;
+  margin-top: 5px;
+  font-weight: 700;
+}
+
+/* ******media Query****** */
+@media (max-width: 750px) {
+  .delivery_Information {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+}

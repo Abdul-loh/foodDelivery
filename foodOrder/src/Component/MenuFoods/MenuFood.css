@@ -1,0 +1,7 @@
+.menu_display {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  row-gap: 50px;
+  gap: 30px;
+  margin-top: 30px;
+}
