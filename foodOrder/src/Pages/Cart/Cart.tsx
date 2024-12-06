@@ -3,7 +3,7 @@ import "./Cart.css";
 import { StoreMenu } from "../../Context/StoreMenu";
 import { useNavigate } from "react-router-dom";
 const Cart = () => {
-  const { food_list, subMenu, menuPicking, getTotalAmout } =
+  const { food_list, subMenu, menuPicking, getTotalAmout, url } =
     useContext(StoreMenu);
   const navigate = useNavigate();
 
@@ -25,7 +25,7 @@ const Cart = () => {
           return (
             <>
               <div className="cartItem-tittle cartAbout">
-                <img src={item.image} alt="" />
+                <img src={url + "/images/" + item.image} alt="" />
                 <p>{item.name}</p>
                 <p>${item.price}</p>
                 <p>{menuPicking[item._id]}</p>

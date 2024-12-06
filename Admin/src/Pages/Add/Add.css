@@ -1,0 +1,61 @@
+.Add {
+  margin-top: 40px;
+  width: 70%;
+  margin-left: 80px;
+}
+.Admin_Update {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  margin-bottom: 7px;
+}
+.Admin_Update p {
+  font-weight: 800;
+}
+.Add_itemsPage form {
+  max-width: 400px;
+}
+.uploadImage img {
+  width: 150px;
+}
+.pro-Name input,
+textarea {
+  padding: 13px;
+  font-size: 15px;
+  outline: none;
+}
+.Categ_Price {
+  display: flex;
+  gap: 20px;
+}
+.category select,
+.price input {
+  padding: 10px;
+  outline: tomato;
+  font-size: 15px;
+}
+
+.price input {
+  max-width: 100px;
+}
+
+.addBtn {
+  padding: 10px 50px;
+  border: none;
+  outline: none;
+  background-color: black;
+  cursor: pointer;
+  color: white;
+  text-transform: uppercase;
+}
+
+/* Media Query */
+@media (max-width: 900px) {
+  .pro-Name input,
+  textarea {
+    width: 100%;
+  }
+  .AboutAddFood {
+    width: 100%;
+  }
+}

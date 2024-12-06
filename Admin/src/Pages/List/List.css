@@ -1,0 +1,38 @@
+.listing_foods {
+  margin-top: 40px;
+
+  margin-left: 80px;
+}
+.cursor {
+  cursor: pointer;
+}
+
+.listProduct {
+  display: grid;
+  grid-template-columns: 0.5fr 2fr 1fr 1fr 0.5fr;
+  align-items: center;
+  gap: 20px;
+  padding: 12px 15px;
+  border: 1px solid #cacaca;
+  font-size: 13px;
+  width: 100vh;
+}
+.Tittle-added {
+  background-color: #f9f9f9;
+  font-weight: 800;
+}
+
+.ProductItems img {
+  width: 50px;
+}
+/* Media Query */
+@media (max-width: 600px) {
+  .listProduct {
+    display: grid;
+    grid-template-columns: 1fr 3fr 1fr;
+    gap: 15px;
+  }
+  .Tittle-added {
+    display: none;
+  }
+}

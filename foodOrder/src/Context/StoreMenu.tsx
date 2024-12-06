@@ -1,19 +1,52 @@
+import axios from "axios";
 import { createContext, useEffect, useState } from "react";
-import { food_list } from "../assets/foodassets";
+
 export const StoreMenu = createContext(null);
 
 const StoreMenuProvider = (props) => {
-  const [menuPicking, SetmenuPicking] = useState({});
+  const [menuPicking, setMenuPicking] = useState({});
+  const url = "http://localhost:4000";
+  const [token, setToken] = useState("");
 
-  const addMenu = (itemId) => {
+  const [food_list, setFoodList] = useState([]);
+
+  const foodListFetching = async () => {
+    const response = await axios.get(url + "/api/food/list");
+    setFoodList(response.data.data);
+  };
+
+  const loadCart = async (token) => {
+    const response = await axios.post(
+      url + "/api/cart/get",
+      {},
+      { headers: { token } }
+    );
+    setMenuPicking(response.data.data);
+  };
+
+  const addMenu = async (itemId) => {
     if (!menuPicking[itemId]) {
-      SetmenuPicking((prev) => ({ ...prev, [itemId]: 1 }));
+      setMenuPicking((prev) => ({ ...prev, [itemId]: 1 }));
     } else {
-      SetmenuPicking((prev) => ({ ...prev, [itemId]: prev[itemId] + 1 }));
+      setMenuPicking((prev) => ({ ...prev, [itemId]: prev[itemId] + 1 }));
+    }
+    if (token) {
+      await axios.post(
+        url + "/api/cart/add",
+        { itemId },
+        { headers: { token } }
+      );
     }
   };
-  const subMenu = (itemId) => {
-    SetmenuPicking((prev) => ({ ...prev, [itemId]: prev[itemId] - 1 }));
+  const subMenu = async (itemId) => {
+    setMenuPicking((prev) => ({ ...prev, [itemId]: prev[itemId] - 1 }));
+    // if (token) {
+    //   await axios.post(
+    //     url + "/api/cart/remove",
+    //     { itemId },
+    //     { headers: { token } }
+    //   );
+    // }
   };
 
   const getTotalAmout = () => {
@@ -27,13 +60,27 @@ const StoreMenuProvider = (props) => {
     return totalAmout;
   };
 
+  useEffect(() => {
+    async function loadData() {
+      await foodListFetching();
+      if (localStorage.getItem("token")) {
+        setToken(localStorage.getItem("token"));
+        // await loadCart(localStorage.getItem("token"));
+      }
+    }
+    loadData();
+  }, []);
+
   const contextValue = {
     food_list,
     addMenu,
     subMenu,
     menuPicking,
-    SetmenuPicking,
+    setMenuPicking,
     getTotalAmout,
+    url,
+    token,
+    setToken,
   };
   return (
     <StoreMenu.Provider value={contextValue}>

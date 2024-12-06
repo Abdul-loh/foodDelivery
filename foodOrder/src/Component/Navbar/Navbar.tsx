@@ -1,12 +1,23 @@
 import "./Navbar.css";
 import { foodOrderIcon } from "../../assets/foodassets";
 import { useContext, useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { StoreMenu } from "../../Context/StoreMenu";
+import profile from "../../assets/profile_icon.png";
+import bag from "../../assets/bag_icon.png";
+import logout from "../../assets/logout_icon.png";
 
 function Navbar({ SetlogpopUp }) {
-  const { getTotalAmout, menuPicking } = useContext(StoreMenu);
+  const { getTotalAmout, token, setToken } = useContext(StoreMenu);
   const [active, setActive] = useState("Home");
+
+  const navigate = useNavigate();
+  const logOut = () => {
+    localStorage.removeItem("token");
+    setToken("");
+    navigate("/");
+  };
+
   return (
     <div className="foodNav" id="Navbar">
       <Link to="/">
@@ -70,10 +81,27 @@ function Navbar({ SetlogpopUp }) {
           </Link>
           <div className={` ${getTotalAmout() === 0 ? "" : "dot"}`}></div>
         </div>
+        {!token ? (
+          <button onClick={() => SetlogpopUp(true)} className="homeBtn">
+            sign in
+          </button>
+        ) : (
+          <div className="profile-AfterSignin">
+            <img className="Profiles" src={profile} alt="" />
 
-        <button onClick={() => SetlogpopUp(true)} className="homeBtn">
-          sign in
-        </button>
+            <ul className="profileDropdown">
+              <div className="profileList">
+                <li>
+                  <img src={bag} alt="" /> <p>Orders</p>
+                </li>
+                <hr />
+                <li onClick={logOut}>
+                  <img src={logout} alt="" /> <p>Logout</p>
+                </li>
+              </div>
+            </ul>
+          </div>
+        )}
       </div>
     </div>
   );

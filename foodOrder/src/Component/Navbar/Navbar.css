@@ -95,6 +95,46 @@
     display: none;
   }
 }
+.profile-AfterSignin {
+  position: relative;
+}
+.profileDropdown {
+  display: none;
+  list-style: none;
+  position: absolute;
+  right: 0;
+
+  z-index: 1;
+}
+.profile-AfterSignin:hover .profileDropdown {
+  display: block;
+  cursor: pointer;
+  background-color: #ccc;
+  outline: tomato;
+  border: 1px solid tomato;
+  padding: 10px;
+}
+.profileDropdown li {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.profileDropdown li:hover {
+  color: tomato;
+}
+
+.profileDropdown p {
+  font-weight: 800;
+  font-size: 20px;
+}
+
+.profileList {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
 /********** ipad responsive navBar *********/
 @media (max-width: 900px) {
   .foodNav {

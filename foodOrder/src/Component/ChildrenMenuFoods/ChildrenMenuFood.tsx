@@ -7,12 +7,12 @@ import sub from "../../assets/remove_icon_red.png";
 import { StoreMenu } from "../../Context/StoreMenu";
 
 function ChildrenMenuFood({ id, description, image, price, name }) {
-  const { addMenu, subMenu, menuPicking } = useContext(StoreMenu);
+  const { addMenu, subMenu, menuPicking, url } = useContext(StoreMenu);
 
   return (
     <div className="ChildrenMenuFood">
       <div className="Dishes">
-        <img className="Dishes_images" src={image} alt="" />
+        <img className="Dishes_images" src={url + "/images/" + image} alt="" />
 
         {!menuPicking[id] ? (
           <img

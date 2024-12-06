@@ -48,6 +48,7 @@
 }
 .logbtn {
   width: 100%;
+  cursor: pointer;
   outline: none;
   background-color: tomato;
   color: white;

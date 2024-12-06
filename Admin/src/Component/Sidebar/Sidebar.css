@@ -1,0 +1,44 @@
+.Sidebar {
+  width: 20%;
+  height: 100vh;
+  border: 1px solid #ccc;
+  border-top: 0px;
+  border-left: none;
+}
+.aboutAdmin {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+  padding-left: 50px;
+  padding-top: 50px;
+}
+.list,
+.add,
+.order {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  font-weight: 800;
+  border: 1px solid #ccc;
+  border-right: 0px;
+  padding: 13px 0px;
+}
+.add.active,
+.list.active {
+  background-color: #fff0ed;
+  border-color: tomato;
+}
+.list img,
+.add img,
+.order img {
+  width: 25px;
+}
+
+/* mediaQuerry */
+@media (max-width: 800px) {
+  .list p,
+  .add p,
+  .order p {
+    display: none;
+  }
+}
