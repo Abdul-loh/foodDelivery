@@ -30,9 +30,6 @@
   text-transform: capitalize;
 }
 
-/* .rightDeliv_info {
-  width: 100%;
-} */
 .cartsTotal {
   display: flex;
   justify-content: space-between;

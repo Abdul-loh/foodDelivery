@@ -1,5 +1,5 @@
 import { useContext } from "react";
-import "./placeOrder.css";
+import "./PlaceOrder.css";
 import { StoreMenu } from "../../Context/StoreMenu";
 function placeOrder() {
   const { getTotalAmout } = useContext(StoreMenu);
