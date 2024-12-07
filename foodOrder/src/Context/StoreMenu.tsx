@@ -15,38 +15,15 @@ const StoreMenuProvider = (props) => {
     setFoodList(response.data.data);
   };
 
-  const loadCart = async (token) => {
-    const response = await axios.post(
-      url + "/api/cart/get",
-      {},
-      { headers: { token } }
-    );
-    setMenuPicking(response.data.data);
-  };
-
-  const addMenu = async (itemId) => {
+  const addMenu = (itemId) => {
     if (!menuPicking[itemId]) {
       setMenuPicking((prev) => ({ ...prev, [itemId]: 1 }));
     } else {
       setMenuPicking((prev) => ({ ...prev, [itemId]: prev[itemId] + 1 }));
     }
-    if (token) {
-      await axios.post(
-        url + "/api/cart/add",
-        { itemId },
-        { headers: { token } }
-      );
-    }
   };
-  const subMenu = async (itemId) => {
+  const subMenu = (itemId) => {
     setMenuPicking((prev) => ({ ...prev, [itemId]: prev[itemId] - 1 }));
-    // if (token) {
-    //   await axios.post(
-    //     url + "/api/cart/remove",
-    //     { itemId },
-    //     { headers: { token } }
-    //   );
-    // }
   };
 
   const getTotalAmout = () => {

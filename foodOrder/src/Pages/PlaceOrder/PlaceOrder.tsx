@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import { useContext } from "react";
 import "./placeOrder.css";
 import { StoreMenu } from "../../Context/StoreMenu";
 function placeOrder() {

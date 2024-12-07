@@ -1,4 +1,3 @@
-import React from "react";
 import "./DownloadApp.css";
 import goggle from "../../assets/play_store.png";
 import app from "../../assets/app_store.png";

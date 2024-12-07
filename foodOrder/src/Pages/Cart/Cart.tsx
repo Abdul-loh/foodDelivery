@@ -24,7 +24,7 @@ const Cart = () => {
         if (menuPicking[item._id] > 0) {
           return (
             <>
-              <div className="cartItem-tittle cartAbout">
+              <div key={index} className="cartItem-tittle cartAbout">
                 <img src={url + "/images/" + item.image} alt="" />
                 <p>{item.name}</p>
                 <p>${item.price}</p>

@@ -1,4 +1,4 @@
-import React, { useContext, useState } from "react";
+import { useContext, useState } from "react";
 import "./LoginPop.css";
 import dismiss from "../../assets/cross_icon.png";
 import { StoreMenu } from "../../Context/StoreMenu";

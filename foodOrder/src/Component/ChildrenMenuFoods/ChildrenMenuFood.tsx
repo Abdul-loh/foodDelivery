@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import { useContext } from "react";
 import rateUs from "../../assets/rating_starts.png";
 import "./ChildrenMenuFood.css";
 import plus from "../../assets/add_icon_white.png";

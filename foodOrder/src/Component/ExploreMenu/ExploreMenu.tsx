@@ -1,4 +1,3 @@
-import React from "react";
 import "./ExporeMenu.css";
 import { menu_list } from "../../assets/foodassets";
 
