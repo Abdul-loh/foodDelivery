@@ -5,7 +5,7 @@ export const StoreMenu = createContext(null);
 
 const StoreMenuProvider = (props) => {
   const [menuPicking, setMenuPicking] = useState({});
-  const url = "http://localhost:4000";
+  const url = "https://fooddeliverybackend-zgnf.onrender.com";
   const [token, setToken] = useState("");
 
   const [food_list, setFoodList] = useState([]);
